@@ -13,9 +13,9 @@ public class MyContainer {
 
     container.fraction(new DatasourcesFraction()
         .jdbcDriver("mysql", (d) -> {
-          d.driverClassName("com.mysql.cj.jdbc.Driver");
+          d.driverClassName("com.mysql.jdbc.Driver");
           d.xaDatasourceClass("com.mysql.jdbc.jdbc2.optional.MysqlXADataSource");
-          d.driverModuleName("com.mysql.jdbc.driver");
+          d.driverModuleName("com.mysql");
         })
         .dataSource("MyDS", (ds) -> {
           ds.driverName("mysql");
